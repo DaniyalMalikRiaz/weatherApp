@@ -1,0 +1,28 @@
+define({
+
+  init : function (){
+    try{
+       this.view.btn.onClick=this.getWeatherAPI;
+    }catch(e){ alert("Generate Error :"+JSON.stringify(e));}//end of the catch body
+  },//end of the body init perShow : function (){
+
+  preShow : function (){
+    try{ }catch(e){ alert("Generate Error :"+JSON.stringify(e));}//end of the catch body
+  },//end of the body init
+ 
+  postShow : function (){
+    try{ }catch(e){ alert("Generate Error :"+JSON.stringify(e));}//end of the catch body
+  },//end of the body init
+  
+  
+  getWeatherAPI: function (){
+    try{
+      var data={"cityName":"karachi","appid":"4383fcc5b2de663d30d77c940de8a77c"};
+      var authModule = kony.mvc.MDAApplication.getSharedInstance().getModuleManager().getModule("WeatherUIModule");
+		authModule.presentationController.getWeatherAPI(data);
+
+    }catch(e){
+      alert("Generate Error :"+JSON.stringify(e));
+    }//end of the catch body },//end of the body getWeatherAPI
+  },
+});
