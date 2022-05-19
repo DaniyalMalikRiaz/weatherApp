@@ -17,7 +17,7 @@ define({
   
   getWeatherAPI: function (){
     try{
-      var data={"cityName":"karachi","appid":"4383fcc5b2de663d30d77c940de8a77c"};
+      var data={"CityName":"karachi","appid":"4383fcc5b2de663d30d77c940de8a77c"};
       var authModule = kony.mvc.MDAApplication.getSharedInstance().getModuleManager().getModule("WeatherUIModule");
 		authModule.presentationController.getWeatherAPI(data);
 
